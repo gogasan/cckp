@@ -1,0 +1,99 @@
+<h2 style="margin-top:3px"><span style="font-size:13pt"><span style="font-family:&quot;Calibri Light&quot;,sans-serif"><span style="color:#2f5496"><span style="font-weight:normal"><b><span style="font-size:14.0pt">NetCDF File Conventions : Directory Structure and File Name</span></b></span></span></span></span></h2>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><b>netCDF directory:</b></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif">../<span style="background:yellow">{collection}</span>/{<span style="background:fuchsia">variable</span>}/{<span style="background:lime">model-run</span>}/{<span style="background:aqua">file with data</span>}.nc</span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="background:yellow">Collections:</span></span></span></p>
+
+<ul>
+	<li style="margin-left:8px"><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif">cmip6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : oldest collection, equivalent to cmip6-1x1 (dims 181x361)</span></span></li>
+	<li style="margin-left:8px"><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif">cmip6-x1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : new 1x1-degree resolution (dims 180x360)</span></span></li>
+	<li style="margin-left:8px"><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif">cmip6-x0.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 0.5x0.5 degree CRU historical and ocean data</span></span></li>
+	<li style="margin-left:8px"><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif">cmip6-x0.25&nbsp;&nbsp;&nbsp; : 0.25x0.25 degrees from ERA5, and downscaled (721x1440)</span></span></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="background:fuchsia">Variable:</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif">All variables created by CMIP6-D5a_Indicators_TimeseriesComputation.ncl</span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="background:lime">Model-Run:</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif">$ModelName-$ModelVariant-$CMIPScenario</span></span><br />
+&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><b><span style="background:aqua">netCDF filename</span>:</b></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif">{<span style="background:purple"><span style="color:white">product-variable</span></span>}_{<span style="background:yellow">collection</span>}_{<span style="background:lime">model-run</span>}_{<span style="background:darkcyan"><span style="color:white">type</span></span>}_{<span style="background:red">percentile</span>}_{<span style="background:blue"><span style="color:white">period</span></span>}.nc</span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><i>$type-$variable-$aggregation-$statistic _ collection _ model-run _ $type _ $percentile _ period</i></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Model Examples:</span></b></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">../<span style="background:yellow">cmip6-x1/</span><span style="background:fuchsia"> tas</span>/<span style="background:lime">access-cm2-r1i1p1f1-historical</span>/</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background:purple"><span style="color:white">climatology-tas-annual-mean</span></span>_<span style="background:yellow">cmip6-x1</span>_<span style="background:lime">access-cm2-r1i1p1f1-historical</span>_<span style="background:darkcyan"><span style="color:white">climatology</span></span>_<span style="background:red">mean</span>_<span style="background:blue"><span style="color:white">1991-2014</span></span>.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; climatology-tas-monthly-mean_cmip6-x1_access-cm2-r1i1p1f1-historical_climatology_mean_1991-2014.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; climatology-tas-seasonal-mean_cmip6-x1_access-cm2-r1i1p1f1-historical_climatology_mean_1991-2014.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background:purple"><span style="color:white">timeseries-tas-annual-mean</span></span>_<span style="background:yellow">cmip6-x1</span>_<span style="background:lime">access-cm2-r1i1p1f1-historical</span>_<span style="background:darkcyan"><span style="color:white">timeseries</span></span>_<span style="background:red">mean</span>_<span style="background:blue"><span style="color:white">1971-2014</span></span>.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; timeseries-tas-monthly-mean_cmip6-x1_access-cm2-r1i1p1f1-historical_timeseries_mean_1971-2014.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; timeseries-tas-seasonal-mean_cmip6-x1_access-cm2-r1i1p1f1-historical_timeseries_mean_1971-2014.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">../<span style="background:yellow">cmip6-x1</span>/<span style="background:fuchsia"> tas</span>/<span style="background:lime">access-cm2-r1i1p1f1-ssp126</span>/</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; climatology-tas-annual-mean_cmip6-x1_access-cm2-r1i1p1f1-ssp126_climatology_mean_2020-2039.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background:purple"><span style="color:white">trend-tas-annual-mean</span></span>_<span style="background:yellow">cmip6-x1</span>_<span style="background:lime">access-cm2-r1i1p1f1-ssp126</span>_<span style="background:darkcyan"><span style="color:white">climatology</span></span>_<span style="background:red">mean</span>_<span style="background:blue"><span style="color:white">1971-2020</span></span>.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trendsignificance-tas-annual-mean_cmip6-x1_access-cm2-r1i1p1f1-ssp126_climatology_mean_1971-2020.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background:purple"><span style="color:white">heatplot-tas-monthly-mean</span></span>_<span style="background:yellow">cmip6-x1</span>_<span style="background:lime">access-cm2-r1i1p1f1-ssp126</span>_<span style="background:darkcyan"><span style="color:white">heatplot</span></span>_<span style="background:red">mean</span>_<span style="background:blue"><span style="color:white">1951-2100</span></span>.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; timeseries-tas-seasonal-mean_cmip6-x1_access-cm2-r1i1p1f1-ssp126_timeseries_mean_2015-2100.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Ensembles Examples:</span></b></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">../<span style="background:yellow">cmip6-x1</span>/<span style="background:fuchsia"> tas</span>/<span style="background:lime">cmip6-ensemble-historical</span>/</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; climatology-tas-annual-mean_cmip6-x1_cmip6-ensemble-historical_<span style="background:darkcyan"><span style="color:white">climatology</span></span>_<span style="background:red">p10</span>_1991-2014.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; climatology-tas-annual-mean_cmip6-x1_cmip6-ensemble-historical_climatology_<span style="background:red">median</span>_1991-2014.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; timeseries-tas-annual-mean_cmip6-x1_cmip6-ensemble-historical_timeseries_<span style="background:red">median</span>_1971-2014.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">../cmip6-x1/tas/cmip6-ensemble-ssp126/</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; climatology-tas-annual-mean_cmip6-x1_cmip6-ensemble-ssp126_climatology_median_2020-2039.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; climatology-tas-annual-mean_cmip6-x1_cmip6-ensemble-ssp126_climatology_p90_2020-2039.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; timeseries-tas-annual-mean_cmip6-x1_cmip6-ensemble-ssp126_timeseries_<span style="background:red">median</span>_2015-2100.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Extremes Examples:</span></b></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">../<span style="background:yellow">cmip6-x1</span>/<span style="background:fuchsia">rx1day</span>/<span style="background:lime">cmip6-ensemble-ssp245</span>/</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background:purple"><span style="color:white">returnlevel10yr-rx1day-period-mean</span></span>_<span style="background:yellow">cmip6-x1</span>_<span style="background:lime">cmip6-ensemble-ssp245</span>_<span style="background:darkcyan"><span style="color:white">climatology</span></span>_<span style="background:red">median</span>_<span style="background:blue"><span style="color:white">1991-2014</span></span>.nc</span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background:purple"><span style="color:white">timeseries-rx1day-annual-mean</span></span>_<span style="background:yellow">cmip6-x1</span>_<span style="background:lime">cmip6-ensemble-ssp245</span>_<span style="background:darkcyan"><span style="color:white">timeseries</span></span>_<span style="background:red">median</span>_<span style="background:blue"><span style="color:white">1971-2014</span></span>.nc</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="background:purple"><span style="color:white">returnlevel10yr-rx1day-period-mean</span></span>_cmip6-x1_cmip6-ensemble-ssp245_<span style="background:darkcyan"><span style="color:white">climatology</span></span>_median_1991-2014.nc</span></span></span></p>
+
+<p>&nbsp;</p>
